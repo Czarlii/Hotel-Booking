@@ -1,0 +1,565 @@
+/* Reset i podstawowe style */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+input,
+textarea,
+select,
+button {
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #ddd;
+	color: #333;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+header,
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 40px 0;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	background-color: #444;
+}
+
+nav ul li {
+	float: left;
+	width: 7%;
+	margin: 0 10px;
+}
+
+nav ul li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	line-height: 50px;
+	border-radius: 5px;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+	background-color: #555;
+	color: rgb(96, 130, 233);
+	transform: scale(1.1);
+}
+
+main {
+	display: flex;
+	/* height: 100vh; */
+	padding: 20px;
+	background-color: #ddd;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select,
+button,
+input[type='submit'] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.form-group .error {
+	color: red;
+	margin-top: 5px;
+}
+
+button,
+input[type='submit'] {
+	background-color: #333;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+button:hover,
+input[type='submit']:hover {
+	background-color: #555;
+}
+
+img.small-image {
+	width: 100%;
+	margin: 30px 0;
+	height: 600px;
+}
+
+.intro,
+.contact-info,
+.login-form {
+	margin: auto;
+	text-align: center;
+	width: 50%;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+.btn:hover {
+	background-color: #555;
+}
+
+.contact-info,
+.login-form {
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.payments-info,
+.about-info {
+	background-color: #fff;
+	justify-content: center;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 100%; /* Możesz dostosować szerokość w zależności od potrzeb */
+	text-align: center;
+}
+
+.payments-info,
+.about-info h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #2c3e50;
+}
+
+.payments-info,
+.about-info p {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+.payments-info ul {
+	list-style-type: disc;
+	margin: 20px auto;
+	text-align: left;
+	max-width: 80%;
+}
+
+.payments-info li {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.centered-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* min-height: 100vh; */
+}
+
+/* Dostepne pokoje */
+
+.rooms {
+	display: flex;
+	flex-wrap: wrap; /* Pozwala na zawijanie kart, jeśli nie mieszczą się w jednym rzędzie */
+	gap: 20px; /* Odstęp między kartami */
+	justify-content: center; /* Wyśrodkowanie kart w poziomie */
+}
+
+.room-card {
+	width: 500px; /* Szerokość karty */
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	overflow: hidden; /* Aby obrazki i inne elementy nie wystawały poza kartę */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s; /* Efekt animacji przy najechaniu */
+}
+
+.room-card:hover {
+	transform: scale(1.05); /* Efekt powiększenia karty przy najechaniu */
+}
+
+.room-card img {
+	width: 100%; /* Aby obrazek zajmował całą szerokość karty */
+	height: 400px; /* Wysokość obrazka */
+	object-fit: cover; /* Aby obrazek był odpowiednio przycięty */
+}
+
+.room-card h3 {
+	padding: 10px;
+	background-color: #f4f4f4;
+	margin: 0;
+}
+
+.room-card p {
+	padding: 10px;
+	margin: 0;
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-radius: 0 0 10px 10px; /* Zaokrąglenie tylko dolnych rogów przycisku */
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+.btn:hover {
+	background-color: #555;
+}
+
+/* Formularz rejestracyjny */
+
+.register-form {
+	min-width: 500px; /* Maksymalna szerokość karty */
+	min-width: 500px;
+	margin: 50px auto; /* Wyśrodkowanie karty w poziomie i dodanie odstępu na górze i na dole */
+	padding: 20px; /* Wewnętrzny odstęp */
+	background-color: #fff; /* Białe tło */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień dookoła karty */
+	border-radius: 10px; /* Zaokrąglone rogi */
+	text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.register-form h2 {
+	margin-bottom: 20px; /* Odstęp na dole nagłówka */
+}
+
+.register-form label {
+	text-align: left; /* Wyrównanie tekstu do lewej strony */
+	display: block; /* Wyświetlanie jako blok */
+	margin-bottom: 5px; /* Odstęp na dole etykiety */
+}
+
+.register-form input[type='text'],
+.register-form input[type='password'],
+.register-form input[type='email'] {
+	width: 100%; /* Pełna szerokość */
+	padding: 10px; /* Wewnętrzny odstęp */
+	margin-bottom: 10px; /* Odstęp na dole */
+	border: 1px solid #ccc; /* Ramka */
+	border-radius: 5px; /* Zaokrąglone rogi */
+}
+
+.register-form .btn {
+	width: 100%; /* Pełna szerokość */
+	padding: 10px; /* Wewnętrzny odstęp */
+	background-color: #333; /* Kolor tła */
+	color: #fff; /* Kolor tekstu */
+	border: none; /* Brak ramki */
+	border-radius: 5px; /* Zaokrąglone rogi */
+	cursor: pointer; /* Kursor wskazujący */
+	transition: background-color 0.3s; /* Animacja zmiany koloru tła */
+}
+
+.register-form .btn:hover {
+	background-color: #555; /* Kolor tła po najechaniu */
+}
+
+.register-form .help-block {
+	color: red; /* Kolor tekstu dla błędów */
+	font-size: 12px; /* Rozmiar czcionki dla błędów */
+	margin-bottom: 10px; /* Odstęp na dole dla błędów */
+}
+
+.register-form p {
+	margin-top: 20px; /* Odstęp na górze dla tekstu */
+}
+
+.search-form {
+	background-color: #fff;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-form form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1600px;
+}
+
+.search-form input,
+.search-form select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+.search-form .btn {
+	width: auto; /* Resetujemy szerokość przycisku */
+}
+
+/* Dodaj nowe style dla kart pokoi */
+.room-card {
+	width: 300px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s;
+	overflow: hidden;
+}
+
+.room-card:hover {
+	transform: scale(1.05);
+}
+
+.room-card img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.room-card h3 {
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.room-card p {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+/* Styl dla przycisków akcji */
+.action-buttons {
+	margin-top: 20px;
+}
+
+.action-buttons a {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	margin: 5px;
+	transition: background-color 0.3s;
+}
+
+.action-buttons a:hover {
+	background-color: #555;
+}
+
+/* Stylizacja listy opcji */
+.centered-container main ul {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0;
+}
+
+.centered-container main ul li {
+	margin: 10px 0;
+}
+
+.centered-container main ul li a {
+	min-width: 150px;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.centered-container main ul li a:hover {
+	background-color: #555;
+}
+
+/* Stylizacja siatki opinii */
+
+.reviews-container {
+	display: flex;
+	flex-wrap: wrap; /* Pozwala na zawijanie kart, jeśli nie mieszczą się w jednym rzędzie */
+	gap: 20px; /* Odstęp między kartami */
+	justify-content: center; /* Wyśrodkowanie kart w poziomie */
+}
+
+.reviews-section h2 {
+	text-align: center;
+}
+.reviews-grid {
+	display: flex;
+	flex-wrap: wrap; /* Pozwala na zawijanie kart, jeśli nie mieszczą się w jednym rzędzie */
+	gap: 20px; /* Odstęp między kartami */
+	justify-content: center; /* Wyśrodkowanie kart w poziomie */
+}
+
+/* Stylizacja karty opinii */
+.review-card {
+	min-width: calc(33.33% - 20px); /* Szerokość karty to jedna trzecia dostępnego miejsca minus odstęp */
+	background-color: #fff;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	transition: transform 0.3s; /* Efekt animacji przy najechaniu */
+	margin-bottom: 20px; /* Dodajemy odstęp na dole, aby karty nie były zbyt blisko siebie w pionie */
+}
+
+.review-card:hover {
+	transform: scale(1.05); /* Efekt powiększenia karty przy najechaniu */
+}
+
+.my-rooms h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.my-rooms ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.room-card {
+	width: 300px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s;
+	overflow: hidden;
+}
+
+.room-card:hover {
+	transform: scale(1.05);
+}
+
+.room-card form {
+	margin-top: 10px;
+}
+
+.user-reviews h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 24px; /* Możesz dostosować rozmiar czcionki według potrzeb */
+	color: #333; /* Możesz dostosować kolor według potrzeb */
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom: 2px solid #ddd; /* Dodajemy dolną ramkę dla wyróżnienia */
+}
+
+.user-reviews {
+	display: flex;
+	flex-wrap: wrap; /* Pozwala na zawijanie kart, jeśli nie mieszczą się w jednym rzędzie */
+	gap: 20px; /* Odstęp między kartami */
+	justify-content: center; /* Wyśrodkowanie kart w poziomie */
+}
+
+.review-card small {
+	display: block;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #777;
+}
+
+.review-card form {
+	margin-top: 10px;
+}
+
+.user-reviews textarea {
+	width: 100%; /* Ustawia szerokość textarea na 90% szerokości kontenera */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 10px auto; /* Dodaje odstęp na górze i na dole oraz centruje w poziomie */
+	display: block; /* Ustawia textarea jako blok */
+	resize: none; /* Pozwala na zmianę rozmiaru tylko w pionie */
+}
+
+.review-card input[type='submit'] {
+	width: 100%;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.review-card input[type='submit']:hover {
+	background-color: #555;
+}
+
+.add-review {
+	margin-top: 20px; /* Odsunięcie karty na dół */
+}
+
+.add-review h2 {
+	text-align: center; /* Wyśrodkowanie tekstu */
+	margin-bottom: 20px; /* Odstęp między nagłówkiem a formularzem */
+}
+
+.add-review textarea {
+	width: 100%; /* Szerokość textarea na 100% szerokości kontenera */
+	resize: none; /* Wyłączenie możliwości zmiany rozmiaru */
+}
